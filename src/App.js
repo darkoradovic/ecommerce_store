@@ -10,15 +10,17 @@ import Cart from './components/Cart/Cart';
 import Default from './components/Default';
 import Details from './components/Details';
 import Modal from './components/Modal';
+import Home from './components/Home';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Navbar />
+        <Navbar /> 
 
-        <Switch>
-          <Route exact path="/" component={ProductList}/>
+        <Switch> 
+          <Route exact path="/" component={Home}/>
+          <Route path="/products" component={ProductList}/>
           <Route path="/details" component={Details}/>
           <Route path="/cart" component={Cart}/>
           <Route  component={Default}/>

@@ -27,7 +27,7 @@ export default class Modal extends Component {
                                             <h5>{title}</h5>
                                             <h5 className="text-muted">price: $ {price}</h5>
 
-                                            <Link to="/">
+                                            <Link to="/products">
                                                 <ButtonContainer onClick={() => closeModal()}>
                                                     continue shopping
                                             </ButtonContainer>
@@ -53,6 +53,7 @@ export default class Modal extends Component {
 
 
 const ModalContainer = styled.div`
+    z-index: 100001;
     position: fixed;
     top:0;
     left:0;

@@ -32,7 +32,7 @@ export default class Details extends Component {
                   </p>
                   <p className="text-muted lead">{info}</p>
                   <div>
-                    <Link to="/">
+                    <Link to="/products">
                       <ButtonContainer>
                         back to products
                       </ButtonContainer>

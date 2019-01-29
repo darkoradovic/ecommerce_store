@@ -17,13 +17,13 @@ export default class Product extends Component {
               <div className="img-container p-5" 
                 onClick={() => {
                     value.handleDetail(id);
-                    value.openModal(id);
+                    
                 }}>
                 <Link to="/details">
                   <img src={img} alt="..." className="card-img-top" />
                 </Link>
                 <button className="cart-btn" onClick={() => { value.addToCart(id) }} disabled={inCart ? true : false}>
-                  {inCart ? <p className="text-capitalize mb-0" disabled style={{cursor: "not-allowed"}}>{""}In Cart</p> : <i className="fas fa-shopping-cart"></i>}
+                  {inCart ? <p className="text-capitalize mb-0" disabled style={{cursor: "not-allowed"}}>{""}In Cart</p> : <i className="fas fa-shopping-cart" onClick={() => value.openModal(id)}></i>}
                 </button>
               </div>
               );
@@ -54,12 +54,12 @@ Product.propTypes = {
 const ProductWrapper = styled.div`
   .card{
     border-color: transparent:
-    transition: all 1s linear;
+    transition: all 0.6s linear;
   }
   .card-footer{
     background: transparent;
     border-top: transparent;
-    transition: all 1s linear;
+    transition: all 0.6s linear;
   }
   &:hover{
     .card{
@@ -75,7 +75,7 @@ const ProductWrapper = styled.div`
     overflow: hidden;
   }
   .card-img-top{
-    transition: all 1s linear;
+    transition: all 0.6s linear;
   }
   .img-container:hover .card-img-top{
     transform: scale(1.2);
