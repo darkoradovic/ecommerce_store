@@ -38,7 +38,10 @@ const HomeWrapper = styled.div`
     }
 
     @media (max-width: 600px) {
-        padding: 35%;
+        position: relative;
         
+        .align{
+            padding-top: 60px;
+        }
     }
 `;
